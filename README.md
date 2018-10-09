@@ -17,3 +17,21 @@
 <body data-default_lang="YOUR_LANG_CODE">
 <!-- I recommend using a sequence of chars before the lang code (for example: __EN), because it may conflict with your specified content otherwise -->
 ```
+
+
+
+
+
+## How to use:
+
+1. Add the class langapp to every element that needs to be affected by the language change
+```html
+<div class="langapp"></div>
+```
+
+2. Add the needed attributes to change specific things of the element:
+```html
+innerHTML:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="langapp" data-lang_<mark>content</mark>="__EN°English Content|__DE°German Content"&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(this affects the innerHTML of the element)
+title:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="langapp" data-lang_<mark>title</mark>="__EN°English Content|__DE°German Content"&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(this affects the title attribute of the element)
+src:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img class="langapp" data-lang_<mark>src</mark>="__EN°http://url.to/your/image_EN.png|__DE°http://url.to/your/image_DE.png"&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(this affects the src attribute of the element)
+```
