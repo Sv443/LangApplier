@@ -31,14 +31,14 @@
 
 2. Add the needed attributes to change specific things of the element:
 ```html
-<div class="langapp" data-lang_<mark>content</mark>="__EN°English Content|__DE°German Content">
+<div class="langapp" data-lang_content="__EN°English Content|__DE°German Content">
 <!--(this affects the innerHTML of the element)-->
 
 
-<div class="langapp" data-lang_<mark>title</mark>="__EN°English Content|__DE°German Content">
+<div class="langapp" data-lang_title="__EN°English Content|__DE°German Content">
 <!--(this affects the title attribute of the element)-->
 
 
-<img class="langapp" data-lang_<mark>src</mark>="__EN°http://url.to/your/image_EN.png|__DE°http://url.to/your/image_DE.png">
+<img class="langapp" data-lang_src="__EN°http://url.to/your/image_EN.png|__DE°http://url.to/your/image_DE.png">
 <!--(this affects the src attribute of the element)-->
 ```
