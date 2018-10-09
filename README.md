@@ -4,7 +4,13 @@
 ### Demonstration on <a href="https://sv443.github.io/LangApplier/demo.html">this page</a>
 
 
-## Installation:
+
+<br><br><br><br><br><br><br>
+
+
+
+
+# Installation:
 
 ### 1. Put this in your document header:
 ```html
@@ -22,7 +28,7 @@
 <br><br><br><br><br><br><br>
 
 
-## How to use:
+# How to use:
 
 ### 1. Add the class langapp to every element that needs to be affected by the language change
 ```html
