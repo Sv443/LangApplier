@@ -6,12 +6,12 @@
 
 ## Installation:
 
-1. Put this in your document header:
+### 1. Put this in your document header:
 ```html
 <script src="https://cdn.jsdelivr.net/gh/Sv443/langapplier@1/langapplier.js"></script>
 ```
 
-2. (optional) Set a default language on your <body> element:
+### 2. (optional) Set a default language on your <body> element:
 
 ```html
 <body data-default_lang="YOUR_LANG_CODE">
@@ -24,12 +24,12 @@
 
 ## How to use:
 
-1. Add the class langapp to every element that needs to be affected by the language change
+### 1. Add the class langapp to every element that needs to be affected by the language change
 ```html
 <div class="langapp"></div>
 ```
 
-2. Add the needed attributes to change specific things of the element:
+### 2. Add the needed attributes to change specific things of the element
 ```html
 <div class="langapp" data-lang_content="__EN°English Content|__DE°German Content">
 <!--(this affects the innerHTML of the element)-->
@@ -43,3 +43,19 @@
 <!--(this affects the src attribute of the element)-->
 ```
 Syntax (remove spaces):    `LANG1_CODE  °  LANG1_CONTENT  |  LANG2_CODE  °  LANG2_CONTENT`
+
+
+### 3. Switch between languages
+```javascript
+langapp.change("LANG_CODE");
+```
+
+### 4. If you want to trigger a function once the language was changed, use an event listener like this:
+```javascript
+document.addEventListener("lang_change", yourFunction);
+```
+
+### 5. The document's lang dataset contains the currently selected language so you can read it like this:
+```javascript
+var xy = document.body.dataset.lang;
+```
