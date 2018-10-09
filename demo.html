@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<base target="_blank">
+		<script src="langapplier.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<link href="http://sv443.net/resources/icons/lap/icon.png" rel="shortcut icon">
+		<style>body{font-family:"Roboto",sans-serif;}</style>
+	</head>
+	<body data-default_lang="__EN">
+		<img src="http://sv443.net/resources/icons/lap/icon_flat.png" style="width:10em;height:6em;">
+		<h1><script>document.write(lap.name + " v" + lap.version + " by " + lap.author);</script></h1>
+		<h3><script>document.write(lap.desc);</script></h3>
+		<h3><a href="https://github.com/Sv443/LangApplier">GitHub Repository with more Information</a></h3>
+		
+		<br><br><br>
+		<h2>How to install:</h2>
+		
+		<ol>
+			<li>
+				Put this in your document header:<br>
+				<kbd>&lt;script src="https://cdn.jsdelivr.net/gh/Sv443/langapplier@1/langapplier.js"&gt;&lt;script&gt;</kbd>
+			</li>
+			<br><br><br><br>
+			<li>
+				(optional) Modify your &lt;body&gt; tag with the default language<br>
+				I recommend using a sequence of chars before the lang code (for example: __EN), because it may conflict with your specified content otherwise<br>
+				<kbd>&lt;body data-default_lang="YOUR_LANG_CODE"&gt;</kbd>
+			</li>
+		</ol>
+		
+		
+		
+		<br><br><br><br><br><br><br><br><br>
+		<h2>How to use:</h2>
+		
+		<ol>
+			<li>
+				Add the class langapp to every element that needs to be affected by the language change:<br>
+				<kbd>&lt;div class="langapp"&gt;</kbd>
+			</li>
+			<br><br><br><br>
+			<li>
+				Add the needed attributes to change specific things of the element:<br>
+				<kbd>innerHTML:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="langapp" data-lang_<mark>content</mark>="__EN°English Content|__DE°German Content"&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(this affects the innerHTML of the element)</kbd><br>
+				<kbd>title:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="langapp" data-lang_<mark>title</mark>="__EN°English Content|__DE°German Content"&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(this affects the title attribute of the element)</kbd><br>
+				<kbd>src:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img class="langapp" data-lang_<mark>src</mark>="__EN°http://url.to/your/image_EN.png|__DE°http://url.to/your/image_DE.png"&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(this affects the src attribute of the element)</kbd><br><br><br>
+				<b>Syntax:</b>&nbsp;&nbsp;&nbsp;&nbsp;<mark><kbd>LANG1_CODE&nbsp;&nbsp;°&nbsp;&nbsp;LANG1_CONTENT&nbsp;&nbsp;|&nbsp;&nbsp;<kbd>LANG2_CODE&nbsp;&nbsp;°&nbsp;&nbsp;LANG2_CONTENT</kbd></mark>&nbsp;&nbsp;&nbsp;&nbsp;(remove spaces)
+			</li>
+			<br><br><br><br>
+			<li>
+				Switch between languages:<br>
+				<kbd>langapp.change("LANG_CODE");</kbd>
+			</li>
+			<br><br><br><br>
+			<li>
+				If you want to deactivate the watermark in the console, add this to your header:<br>
+				<kbd>&lt;meta id="langapplier_disable_watermark"&gt;</kbd>
+			</li>
+			<br><br><br><br>
+			<li>
+				If you want to call a function when the language changes you can add an event listener like this:<br>
+				<kbd>document.addEventListener("lang_change", yourFunction);</kbd>
+			</li>
+			<br><br><br><br>
+			<li>
+				The document's lang dataset contains the currently selected language so you can return it like this:<br>
+				<kbd>document.body.dataset.lang;</kbd>
+			</li>
+		</ol>
+		
+		
+		
+		
+		<br><br><br><br><br><br><br><br><br>
+		<h2>Demonstration:</h2>
+		
+		Change Language: <button onclick="langapp.change('__EN')">en</button><button onclick="langapp.change('__DE')">de</button><button onclick="langapp.change('__CUSTOM')">custom</button><button onclick="langapp.change('__adgbuajikn')">invalid language</button>
+		<br>(Using an invalid language will leave everything as is)
+		<br><br>
+		Current Language: <mark><span id="langdisp"></span></mark>
+		<br><br><br><br><br>
+		
+		
+		
+		
+		<kbd>&lt;div class="langapp" data-lang_content="__EN°English Content|__DE°German Content|__CUSTOM°Custom Content" data-lang_title="__EN°English Title|__DE°German Title|__CUSTOM°Custom Language Title"&gt;&lt;/div&gt;</kbd>
+		<br><br>
+		<div id="box" style="border:1px solid black;height:10vh;" class="langapp" data-lang_content="__EN°English Content|__DE°German Content|__CUSTOM°Custom Content" data-lang_title="__EN°English Title|__DE°German Title|__CUSTOM°Custom Language Title"></div><br>
+		
+		
+		
+		<br><br><br><br><br>
+		
+		
+		
+		<kbd>&lt;span class="langapp" data-lang_title="__EN°English hover title|__DE°German hover title|__CUSTOM°Custom Language hover title" data-lang_content="__EN°Language: English - hover over me!|__DE°Language: German - hover over me!|__CUSTOM°Language: Custom - hover over me!"&gt;Hover over me&lt;/span&gt;</kbd>
+		<br><br>
+		<span id="span1" class="langapp" data-lang_title="__EN°English hover title|__DE°German hover title|__CUSTOM°Custom Language hover title" data-lang_content="__EN°Language: English - hover over me!|__DE°Language: German - hover over me!|__CUSTOM°Language: Custom - hover over me!">Hover over me</span><br><br><br>
+		
+		
+		
+		<br><br><br><br><br>
+		
+		
+		
+		<kbd>&lt;img class="langapp" data-lang_src="__EN°http://sv443.net/resources/images/lang_en.png|__DE°http://sv443.net/resources/images/lang_de.png|__CUSTOM°http://sv443.net/resources/images/lang_custom.png" data-lang_title="__EN°English Flag|__DE°German Flag|__CUSTOM°Custom Flag"&gt;</kbd>
+		<br><br>
+		<img id="imgtest" class="langapp" data-lang_src="__EN°http://sv443.net/resources/images/lang_en.png|__DE°http://sv443.net/resources/images/lang_de.png|__CUSTOM°http://sv443.net/resources/images/lang_custom.png" data-lang_title="__EN°English Flag|__DE°German Flag|__CUSTOM°Custom Flag" style="width:5em;height:3em;">
+	
+	
+		<span style="position:fixed;top:1em;right:1em;">(MIT License)</span>
+	</body>
+	<script>
+		document.addEventListener("lang_change", function(){
+			gebid("langdisp").innerHTML=document.body.dataset.lang;
+		});
+	</script>
+</html>
