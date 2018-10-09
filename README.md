@@ -39,6 +39,10 @@
 
 ### 2. Add the needed attributes to change specific things of the element
 ```html
+<!-- in this example __EN and __DE are my language codes -->
+<!-- when the language change function gets called it will search for that code -->
+<!-- here's how to use it: -->
+
 <div class="langapp" data-lang_content="__EN°English Content|__DE°German Content">
 <!--(this affects the innerHTML of the element)-->
 
