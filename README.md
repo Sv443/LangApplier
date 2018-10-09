@@ -42,6 +42,9 @@
 <!-- in this example __EN and __DE are my language codes -->
 <!-- when the language change function gets called it will search for that code -->
 <!-- here's how to use it: -->
+<!-- (you can also stack the attributes to change multiple things at once) -->
+
+
 
 <div class="langapp" data-lang_content="__EN°English Content|__DE°German Content">
 <!--(this affects the innerHTML of the element)-->
