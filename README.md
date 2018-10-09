@@ -34,6 +34,8 @@
 ```html
 <div class="langapp"></div>
 ```
+<br><br>
+
 
 ### 2. Add the needed attributes to change specific things of the element
 ```html
@@ -49,19 +51,28 @@
 <!--(this affects the src attribute of the element)-->
 ```
 Syntax (remove spaces):    `LANG1_CODE  °  LANG1_CONTENT  |  LANG2_CODE  °  LANG2_CONTENT`
+<br><br>
 
 
 ### 3. Switch between languages
 ```javascript
 langapp.change("LANG_CODE");
 ```
+<br><br>
 
-### 4. If you want to trigger a function once the language was changed, use an event listener like this:
+### 4. If you want to trigger a function once the language was changed, use an event listener like this
 ```javascript
 document.addEventListener("lang_change", yourFunction);
 ```
+<br><br>
 
-### 5. The document's lang dataset contains the currently selected language so you can read it like this:
+### 5. The document's lang dataset contains the currently selected language so you can read it like this
 ```javascript
 var xy = document.body.dataset.lang;
+```
+<br><br>
+
+### 6. If you want to disable the watermark in the console, add this to your document header
+```html
+<meta id="langapplier_disable_watermark">
 ```
