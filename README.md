@@ -58,6 +58,8 @@
 
 <img class="langapp" data-lang_src="__EN°http://url.to/your/image_EN.png|__DE°http://url.to/your/image_DE.png">
 <!--(this affects the src attribute of the element)-->
+
+<!-- the same thing can be applied to the onclick, href and placeholder attributes using "data-lang_onclick", "data-lang_href" or "data-lang_placeholder" respectively -->
 ```
 Syntax (remove spaces):    `LANG1_CODE  °  LANG1_CONTENT  |  LANG2_CODE  °  LANG2_CONTENT` (you can add infinite languages)
 <br><br>
@@ -84,4 +86,9 @@ var xy = document.body.dataset.lang;
 ### 6. If you want to disable the watermark in the console, add this to your document header
 ```html
 <meta id="langapplier_disable_watermark">
+```
+
+### 7. If you want to enable console debugging, add this to your document header
+```html
+<meta id="langapplier_enable_debug">
 ```
