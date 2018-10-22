@@ -1,5 +1,5 @@
 [![ko-fi](https://www.ko-fi.com/img/donate_sm.png)](https://sv443.net/ko-fi) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-### Lightweight, easy to use and lightning fast language changer
+### Lightweight, easy to use and lightning fast language changer for infinite languages!
 
 
 ### Don't waste any time coding complex language changing code in JS, just add a few attributes to your HTML elements instead!
@@ -59,7 +59,7 @@
 <img class="langapp" data-lang_src="__EN°http://url.to/your/image_EN.png|__DE°http://url.to/your/image_DE.png">
 <!--(this affects the src attribute of the element)-->
 ```
-Syntax (remove spaces):    `LANG1_CODE  °  LANG1_CONTENT  |  LANG2_CODE  °  LANG2_CONTENT`
+Syntax (remove spaces):    `LANG1_CODE  °  LANG1_CONTENT  |  LANG2_CODE  °  LANG2_CONTENT` (you can add infinite languages)
 <br><br>
 
 
