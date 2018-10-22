@@ -45,7 +45,8 @@
 				Add the needed attributes to change specific things of the element:<br>
 				<kbd>innerHTML:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="langapp" data-lang_<mark>content</mark>="__EN°English Content|__DE°German Content"&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(this affects the innerHTML of the element)</kbd><br>
 				<kbd>title:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="langapp" data-lang_<mark>title</mark>="__EN°English Content|__DE°German Content"&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(this affects the title attribute of the element)</kbd><br>
-				<kbd>src:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img class="langapp" data-lang_<mark>src</mark>="__EN°http://url.to/your/image_EN.png|__DE°http://url.to/your/image_DE.png"&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(this affects the src attribute of the element)</kbd><br><br><br>
+				<kbd>src:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img class="langapp" data-lang_<mark>src</mark>="__EN°http://url.to/your/image_EN.png|__DE°http://url.to/your/image_DE.png"&gt;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(this affects the src attribute of the element)</kbd><br>
+				<kbd>Furthermore you can use <mark>data-lang_onclick</mark>, <mark>data-lang_href</mark> and <mark>data-lang_placeholder</mark></kbd><br><br><br>
 				<b>Syntax:</b>&nbsp;&nbsp;&nbsp;&nbsp;<mark><kbd>LANG1_CODE&nbsp;&nbsp;°&nbsp;&nbsp;LANG1_CONTENT&nbsp;&nbsp;|&nbsp;&nbsp;<kbd>LANG2_CODE&nbsp;&nbsp;°&nbsp;&nbsp;LANG2_CONTENT</kbd></mark>&nbsp;&nbsp;&nbsp;&nbsp;(remove spaces)
 			</li>
 			<br><br><br><br>
@@ -57,6 +58,10 @@
 			<li>
 				If you want to deactivate the watermark in the console, add this to your header:<br>
 				<kbd>&lt;meta id="langapplier_disable_watermark"&gt;</kbd>
+			</li>
+			<li>
+				[1.1.0] If you want to enable console debugging, add this to your header:<br>
+				<kbd>&lt;meta id="langapplier_enable_debug"&gt;</kbd>
 			</li>
 			<br><br><br><br>
 			<li>
